@@ -168,7 +168,7 @@ export default function Home() {
     setErrorMsg("");
     setDemoMode(false);
     try {
-      const res = await fetch(`http://127.0.0.1:8000/predict/${tramite.id}`, {
+      const res = await fetch(`:https://gestion-publica.onrender.com/predict/${tramite.id}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -374,7 +374,7 @@ export default function Home() {
             <p className="text-slate-500 mt-1 text-sm">
               Conectado a{" "}
               <code className="text-blue-400 text-xs bg-blue-500/10 px-1.5 py-0.5 rounded">
-                http://127.0.0.1:8000/predict/{tramiteActivo.id}
+                https://gestion-publica.onrender.com/predict/{tramiteActivo.id}
               </code>
             </p>
           </div>
