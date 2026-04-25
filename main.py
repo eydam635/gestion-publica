@@ -97,3 +97,13 @@ def predecir(tramite: str):
         "recomendacion":
         f"El mejor horario para realizar el trámite de {tramite} es a las {mejor_hora}:00, ya que presenta menor congestión y menor tiempo de espera."
     }
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # Esto permite que cualquier página consulte tu API
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
